@@ -16,11 +16,15 @@
 
 html {
     scroll-behavior: smooth;
+    /* overflow-x: hidden; */
+    scroll-padding-top: 4.7rem;     // Ajusta o padding no scroll dos itens âncora do menu
 }
 
 body {
     background-color: $white-1;
     font-size: 1.6rem;      // Equivale a 16px (padrão)
+    /* overflow-x: hidden; */
+    /* position: relative; */
 }
 
 ul {

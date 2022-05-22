@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Fattoria Web</title>
 </head>
@@ -20,23 +24,31 @@
                 <h2>T.A</h2>
             </div>
 
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#service">Serviços</a>
-                    </li>
-                    <li>
-                        <a href="#differential">Diferenciais</a>
-                    </li>
-                    <li>
-                        <a href="#persona">Personas</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="menu-section">
+                <div class="menu-toggle">
+                    <div class="one"></div>       <!-- primeira barra --> 
+                    <div class="two"></div>       <!-- segunda barra --> 
+                    <div class="three"></div>     <!-- terceira barra --> 
+                </div>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#service">Serviços</a>
+                        </li>
+                        <li>
+                            <a href="#differential">Diferenciais</a>
+                        </li>
+                        <li>
+                            <a href="#persona">Personas</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-
+    <!-- Hero -->
     <section class="hero">
         <div class="hero-title-area">
             <div class="hero-title-container">
@@ -66,7 +78,6 @@
 
     <main>
         <div class="container">
-
             <!-- Serviços -->
             <section id="service">
                 <div class="title">
@@ -201,7 +212,7 @@
                         </div>
                     </div>
 
-                    <div class="persona-card">
+                    <div class="persona-card pers">
                         <div class="persona-card-content">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio,
                                 pretium.</p>
@@ -235,33 +246,45 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-phone-image">
-                <img src="assets/img/phone.png" alt="Celular">
+        <section class="footer-box">
+            <div class="container">
+                <div class="teste-image">
+                    <img src="assets/img/phone.png" alt="Celular">
+                </div>
             </div>
+        </section>
 
-            <div class="footer-content">
-                <div class="footer-content-title">
-                    <h2>Este protótipo foi feito para conhecer melhor suas habilidades</h2>
-                    <p>Etiam sit amet diam dignissim sem pulvinar pulvinar. Quisque elementum purus nec urna consequat, ac feugiat eros ultrices. 
-                        Mauris consectetur sapien non eros ultrices, nec ultrices turpis facilisis.
-                    </p>
-                </div>
-                <div class="footer-content-icon">
-                    <div class="footer-content-icon-container">
-                        <img src="/assets/img/thumbs-up.svg" alt="Joinha">
+        <section class="aux">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-content-title">
+                        <h2>Este protótipo foi feito para conhecer melhor suas habilidades</h2>
+                        <p>Etiam sit amet diam dignissim sem pulvinar pulvinar. Quisque elementum purus nec urna
+                            consequat, ac feugiat eros ultrices.
+                            Mauris consectetur sapien non eros ultrices, nec ultrices turpis facilisis.
+                        </p>
                     </div>
-                    <p>Show</p>
+                    <div class="footer-content-icon">
+                        <div class="footer-content-icon-container">
+                            <img src="/assets/img/thumbs-up.svg" alt="Joinha">
+                        </div>
+                        <p>Show</p>
+                    </div>
                 </div>
             </div>
-            
-        </div>
+        </section>
     </footer>
 
 
+
+
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="assets/js/script.js"></script>
 </body>
 

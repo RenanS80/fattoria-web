@@ -41,11 +41,15 @@ h4 {
 
 html {
   scroll-behavior: smooth;
+  /* overflow-x: hidden; */
+  scroll-padding-top: 4.7rem;
 }
 
 body {
   background-color: #FFFFFF;
   font-size: 1.6rem;
+  /* overflow-x: hidden; */
+  /* position: relative; */
 }
 
 ul {
@@ -58,7 +62,13 @@ a {
 
 header {
   height: 90px;
+  width: 100%;
+  top: 0;
   border-bottom: 1px solid #D8D8D8;
+  z-index: 99999;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #FFFFFF;
 }
 
 header .container {
@@ -66,7 +76,7 @@ header .container {
   max-width: 100rem;
   margin: 0 auto;
   padding: 0 1.2rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,40 +96,119 @@ header .container {
 
 @media (min-width: 769px) and (max-width: 992px) {
   header .container {
-    width: 720px;
+    max-width: 720px;
   }
 }
 
-header .container nav ul {
+@media (max-width: 768px) {
+  header .container .menu-section .menu-toggle {
+    width: 40px;
+    height: 30px;
+    margin-right: 20px;
+  }
+  header .container .menu-section .menu-toggle .one,
+  header .container .menu-section .menu-toggle .two,
+  header .container .menu-section .menu-toggle .three {
+    background-color: #232323;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container .menu-section nav {
+    display: none;
+  }
+}
+
+header .container .menu-section nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2.2rem;
 }
 
-header .container nav ul a {
+header .container .menu-section nav ul a {
   position: relative;
   font-size: 1.8rem;
   color: #232323;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
-header .container nav ul a:after {
-  content: '';
+header .container .menu-section nav ul a:after {
+  content: "";
   position: absolute;
   left: 0;
   bottom: -0.65rem;
   background-color: #692FA5;
 }
 
-header .container nav ul a:hover {
+header .container .menu-section nav ul a:hover {
   color: #692FA5;
 }
 
-header .container nav ul a:hover:after {
+header .container .menu-section nav ul a:hover:after {
   width: 100%;
   height: 0.1rem;
+}
+
+@media (max-width: 768px) {
+  header .container .menu-section.on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #7159c1;
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 70px;
+    padding-left: 30px;
+  }
+  header .container .menu-section.on .menu-toggle {
+    position: absolute;
+    right: 12px;
+    top: 25px;
+  }
+  header .container .menu-section.on .menu-toggle .one,
+  header .container .menu-section.on .menu-toggle .two,
+  header .container .menu-section.on .menu-toggle .three {
+    background-color: #FFFFFF;
+  }
+  header .container .menu-section.on .menu-toggle .one {
+    -webkit-transform: rotate(45deg) translate(7px, 7px);
+            transform: rotate(45deg) translate(7px, 7px);
+  }
+  header .container .menu-section.on .menu-toggle .two {
+    opacity: 0;
+  }
+  header .container .menu-section.on .menu-toggle .three {
+    -webkit-transform: rotate(-45deg) translate(8px, -9px);
+            transform: rotate(-45deg) translate(8px, -9px);
+  }
+  header .container .menu-section.on nav {
+    display: block;
+  }
+  header .container .menu-section.on nav ul {
+    display: block;
+  }
+  header .container .menu-section.on nav ul a {
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    font-size: 3rem;
+    line-height: 8rem;
+    display: block;
+    color: #FFFFFF;
+    font-size: 3.3rem;
+    font-weight: 700;
+  }
 }
 
 .hero {
@@ -127,6 +216,7 @@ header .container nav ul a:hover:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* border: 1px solid black; */
 }
 
 .hero .hero-title-area {
@@ -214,7 +304,7 @@ main .container {
   max-width: 100rem;
   margin: 0 auto;
   padding: 0 1.2rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 @media (max-width: 575px) {
@@ -225,7 +315,7 @@ main .container {
 
 @media (min-width: 769px) and (max-width: 992px) {
   main .container {
-    width: 720px;
+    max-width: 720px;
   }
 }
 
@@ -244,7 +334,7 @@ main .container .title p {
 }
 
 main .container #service {
-  margin-top: 4.8rem;
+  padding-top: 5.2rem;
 }
 
 main .container #service p {
@@ -313,7 +403,7 @@ main .container #service .service-card-group .service-card .service-card-content
 }
 
 main .container #differential {
-  margin-top: 4.8rem;
+  padding-top: 5.2rem;
 }
 
 main .container #differential .differential-card-group {
@@ -328,7 +418,7 @@ main .container #differential .differential-card-group {
       -ms-flex-align: center;
           align-items: center;
   gap: 1.5rem;
-  padding-bottom: 1.5rem;
+  /* padding-bottom: 1.5rem; */
 }
 
 main .container #differential .differential-card-group .differential-card {
@@ -350,7 +440,7 @@ main .container #differential .differential-card-group .differential-card .diffe
 }
 
 main .container #persona {
-  margin-top: 4.8rem;
+  padding-top: 5.2rem;
 }
 
 main .container #persona .persona-card-group {
@@ -361,9 +451,9 @@ main .container #persona .persona-card-group {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 1.5rem;
@@ -467,70 +557,95 @@ main .container #persona .owl-carousel .owl-nav button.owl-next:focus {
 }
 
 footer {
-  height: 370px;
-  width: 100vw;
-  background-color: #692FA5;
-  margin-top: 10rem;
-  /*     position: relative; */
+  overflow: hidden;
 }
 
-footer .container {
+footer .footer-box {
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+footer .footer-box .container {
   height: 100%;
   max-width: 100rem;
   margin: 0 auto;
   padding: 0 1.2rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  /* border: 1px solid green; */
+}
+
+@media (max-width: 575px) {
+  footer .footer-box .container {
+    max-width: auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  footer .footer-box .container {
+    max-width: 720px;
+  }
+}
+
+footer .footer-box .container .teste-image {
+  width: 360px;
+  height: 537px;
+  position: absolute;
+  bottom: -490px;
+  /* border: 1px solid blue; */
+}
+
+footer .footer-box .container .teste-image img {
+  width: 100%;
+  height: 100%;
+}
+
+footer .aux {
+  height: 390px;
+  background-color: #692FA5;
+}
+
+footer .aux .container {
+  height: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+  /* border: 1px solid red; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 @media (max-width: 575px) {
-  footer .container {
+  footer .aux .container {
     max-width: auto;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  footer .container {
-    width: 720px;
+  footer .aux .container {
+    max-width: 720px;
   }
 }
 
-footer .container .footer-phone-image {
-  z-index: 9999;
-  width: 360px;
-  height: 537px;
-  border: 1px solid black;
-  /*             position: absolute;
-            top: -70px; */
-}
-
-footer .container .footer-phone-image img {
-  width: 100%;
-  height: 100%;
-}
-
-footer .container .footer-content {
+footer .aux .container .footer-content {
+  /* border: 1px solid black; */
   max-width: 500px;
 }
 
-footer .container .footer-content .footer-content-title h2 {
+footer .aux .container .footer-content h2, footer .aux .container .footer-content p {
   color: #FFFFFF;
+  margin-bottom: 15px;
 }
 
-footer .container .footer-content .footer-content-title p {
-  color: #FFFFFF;
-  margin-top: 15px;
-}
-
-footer .container .footer-content .footer-content-icon {
+footer .aux .container .footer-content .footer-content-icon {
+  /* border: 1px solid yellow; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,7 +658,11 @@ footer .container .footer-content .footer-content-icon {
   gap: 15px;
 }
 
-footer .container .footer-content .footer-content-icon .footer-content-icon-container {
+footer .aux .container .footer-content .footer-content-icon p {
+  margin: 0;
+}
+
+footer .aux .container .footer-content .footer-content-icon .footer-content-icon-container {
   width: 53px;
   height: 40px;
   background-color: #FFFFFF;
@@ -558,4 +677,77 @@ footer .container .footer-content .footer-content-icon .footer-content-icon-cont
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+/* .aux {
+    height: 390px;
+    width: 100vw;
+    background-color: $purple; */
+/*     position: relative; */
+/* .container {
+        @include container();
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .footer-phone-image {
+            z-index: 9999;
+            width: 360px;
+            height: 537px;
+            border: 1px solid black; */
+/*             position: absolute;
+            top: -70px; */
+/*  
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .footer-content {
+            max-width: 500px;
+            border: 1px solid blue;
+
+            .footer-content-title {
+                
+
+                h2 {
+                    color: $white-1;
+                }
+
+                p {
+                    color: $white-1;
+                    margin-top: 15px; 
+                }
+            }
+
+            .footer-content-icon {
+                display: flex;
+                align-items: center;
+                margin-top: 15px;
+                color: $white-1;
+                font-weight: 700;
+                gap: 15px;
+                
+
+
+                .footer-content-icon-container {
+                    width: 53px;
+                    height: 40px;
+                    background-color: $white-1;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+
+
+
+        }
+    }
+
+    
+ */
 /*# sourceMappingURL=style.css.map */

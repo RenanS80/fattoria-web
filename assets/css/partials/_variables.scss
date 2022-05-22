@@ -12,14 +12,14 @@ $gray-3: #D8D8D8;
     max-width: 100rem;
     margin: 0 auto;
     padding: 0 1.2rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     @media (max-width: 575px) {
         max-width: auto;
     }
     
     @media (min-width: 769px) and (max-width: 992px) {
-        width: 720px;
+        max-width: 720px;
     }
 
 

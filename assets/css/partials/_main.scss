@@ -17,7 +17,7 @@ main {
         }
 
         #service {
-            margin-top: 4.8rem;
+            padding-top: 5.2rem;
 
             p {
                 font-size: 1.5rem;
@@ -73,7 +73,7 @@ main {
         }
 
         #differential {
-            margin-top: 4.8rem;
+            padding-top: 5.2rem;
 
             .differential-card-group {
                 margin-top: 3rem;
@@ -81,7 +81,7 @@ main {
                 justify-content: center;
                 align-items: center;
                 gap: 1.5rem;
-                padding-bottom: 1.5rem;
+                /* padding-bottom: 1.5rem; */
 
                 .differential-card {
                     width: 24rem;
@@ -104,13 +104,13 @@ main {
         }
 
         #persona {
-            margin-top: 4.8rem;
+            padding-top: 5.2rem;
 
             .persona-card-group {
                 margin-top: 3rem;
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: space-between;
                 flex-wrap: wrap;
                 gap: 1.5rem;
                 padding-bottom: 1.5rem;

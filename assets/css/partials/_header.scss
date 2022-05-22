@@ -1,6 +1,11 @@
 header {
     height: 90px;
+    width: 100%;
+    top: 0;
     border-bottom: 1px solid $gray-3;
+    z-index: 99999;
+    position: sticky;
+    background-color: $white-1;
 
     .container {
         @include container();
@@ -9,32 +14,113 @@ header {
         align-items: center;
         justify-content: space-between;
 
-        nav {
-            
-            ul {
-                display: flex;
-                gap: 2.2rem;
-            
-                a {
-                    position: relative;
-                    font-size: 1.8rem;
-                    color: $black-1;
-                    transition: .4s ease;
+        .menu-section {
+            .menu-toggle {
+                @media (max-width: 768px) {
+                    width: 40px; // define o tamanho do container que engloba o menu hambúrguer
+                    height: 30px;
+                    margin-right: 20px;
 
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        bottom: -0.65rem;
-                        background-color: $purple;
+                    .one,
+                    .two,
+                    .three {
+                        background-color: $black-1; // cria os três traços do menu hambúrguer
+                        height: 5px;
+                        width: 100%;
+                        margin: 6px auto;
+                        transition-duration: 0.3s;
+                        border-radius: 5px;
                     }
+                }
+            }
 
-                    &:hover {
-                        color: $purple;
+            nav {
+                @media (max-width: 768px) {
+                    display: none;
+                }
+
+                ul {
+                    display: flex;
+                    gap: 2.2rem;
+
+                    a {
+                        position: relative;
+                        font-size: 1.8rem;
+                        color: $black-1;
+                        transition: 0.4s ease;
 
                         &:after {
-                            width: 100%;
-                            height: 0.1rem;
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -0.65rem;
+                            background-color: $purple;
+                        }
+
+                        &:hover {
+                            color: $purple;
+
+                            &:after {
+                                width: 100%;
+                                height: 0.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-section.on {
+            @media (max-width: 768px) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: #7159c1;
+                z-index: 10; // para ficar posicionado sobre os demais elementos da página
+                display: flex;
+                padding-top: 70px;
+                padding-left: 30px;
+                
+                .menu-toggle {
+                    position: absolute;
+                    right: 12px;
+                    top: 25px;
+
+                    .one,
+                    .two,
+                    .three {
+                        background-color: $white-1;
+                    }
+
+                    .one {
+                        transform: rotate(45deg) translate(7px, 7px);
+                    }
+
+                    .two {
+                        opacity: 0;
+                    }
+
+                    .three {
+                        transform: rotate(-45deg) translate(8px, -9px);
+                    }
+                }
+
+                nav {
+                    display: block; // exibe os itens da nav que foram escondidos no primeiro passo (só serão exibidos caso estejam com a classe "on" - que será manipulada no Javascript)
+                
+                    ul { 
+                        display: block;
+
+                        a {
+                            transition-duration: 0.5s;
+                            font-size: 3rem;
+                            line-height: 8rem;        // aumenta a distância de um item para o outro
+                            display: block;
+                            color: $white-1;
+                            font-size: 3.3rem;
+                            font-weight: 700;
                         }
                     }
                 }

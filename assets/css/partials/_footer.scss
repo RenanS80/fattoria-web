@@ -1,26 +1,119 @@
 footer {
-    height: 370px;
+    overflow: hidden;
+
+    .footer-box {
+        width: 100%;
+        height: 100px;
+        position: relative;
+
+        .container {
+            @include container();
+            /* border: 1px solid green; */
+
+            .teste-image {
+                width: 360px;
+                height: 537px;
+                position: absolute;
+                bottom: -490px;
+                /* border: 1px solid blue; */
+        
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .aux {
+        height: 390px;
+        background-color: $purple;
+
+        .container {
+            @include container();
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .footer-content {
+                /* border: 1px solid black; */
+                max-width: 500px;
+
+                h2, p {
+                    color: $white-1;
+                    margin-bottom: 15px;
+                }
+
+                .footer-content-icon {
+                    /* border: 1px solid yellow; */
+                    display: flex;
+                    align-items: center;
+                    margin-top: 15px;
+                    color: $white-1;
+                    font-weight: 700;
+                    gap: 15px;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .footer-content-icon-container {
+                        width: 53px;
+                        height: 40px;
+                        background-color: $white-1;
+                        border-radius: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+            }
+            
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .aux {
+    height: 390px;
     width: 100vw;
-    background-color: $purple;
-    margin-top: 10rem;
+    background-color: $purple; */
+
 /*     position: relative; */
     
 
-    .container {
+    /* .container {
         @include container();
 
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
 
         .footer-phone-image {
             z-index: 9999;
             width: 360px;
             height: 537px;
-            border: 1px solid black;
+            border: 1px solid black; */
 /*             position: absolute;
             top: -70px; */
-            
+           /*  
             img {
                 width: 100%;
                 height: 100%;
@@ -29,6 +122,7 @@ footer {
 
         .footer-content {
             max-width: 500px;
+            border: 1px solid blue;
 
             .footer-content-title {
                 
@@ -50,6 +144,7 @@ footer {
                 color: $white-1;
                 font-weight: 700;
                 gap: 15px;
+                
 
 
                 .footer-content-icon-container {
@@ -70,4 +165,4 @@ footer {
     }
 
     
-}
+ */
