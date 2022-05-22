@@ -1,0 +1,26 @@
+$purple: #692FA5;
+$black-1: #232323;
+$black-2: #333333;
+$white-1: #FFFFFF;
+$white-2: #F3F3F3;
+$gray-1: #666666;
+$gray-2: #707070;
+$gray-3: #D8D8D8;
+
+@mixin container() {
+    height: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+    border: 1px solid red;
+
+    @media (max-width: 575px) {
+        max-width: auto;
+    }
+    
+    @media (min-width: 769px) and (max-width: 992px) {
+        width: 720px;
+    }
+
+
+}
