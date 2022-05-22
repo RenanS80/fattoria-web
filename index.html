@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Fattoria Web</title>
 </head>
 
 <body>
-    
+
     <header>
         <div class="container">
             <div class="header-brand">
@@ -22,7 +26,7 @@
                         <a href="#service">Serviços</a>
                     </li>
                     <li>
-                        <a href="#reference">Diferenciais</a>
+                        <a href="#differential">Diferenciais</a>
                     </li>
                     <li>
                         <a href="#persona">Personas</a>
@@ -41,7 +45,8 @@
                     <h1>Banner estático de página</h1>
                 </div>
                 <div class="hero-text">
-                    <p>Etiam sit amet diam dignissim sem pulvinar pulvinar. Quisque elementum purus nec urna consequat, ac feugiat eros ultrices. 
+                    <p>Etiam sit amet diam dignissim sem pulvinar pulvinar. Quisque elementum purus nec urna consequat,
+                        ac feugiat eros ultrices.
                         Mauris consectetur sapien non eros ultrices, nec ultrices turpis facilisis.
                     </p>
                 </div>
@@ -53,7 +58,7 @@
 
         <div class="hero-background-area">
             <div class="hero-coffee-image">
-                <img src="assets/img/coffee-img.svg" alt="Coffee">
+                <img src="assets/img/coffee-img.svg" alt="Café">
             </div>
         </div>
     </section>
@@ -61,8 +66,10 @@
 
     <main>
         <div class="container">
+
+            <!-- Serviços -->
             <section id="service">
-                <div class="service-title">
+                <div class="title">
                     <h3>Serviços</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. elit et, ultrices est.</p>
                 </div>
@@ -70,44 +77,192 @@
                 <div class="service-card-group">
                     <div class="service-card">
                         <div class="service-card-image">
-                            <img src="/assets/img/product.png" alt="Service offered">
+                            <img src="/assets/img/product.png" alt="Produto 1">
                         </div>
                         <div class="service-card-content">
                             <div class="service-card-content-container">
                                 <h4>Produto 1</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio, pretium.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio,
+                                    pretium.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="service-card">
                         <div class="service-card-image">
-                            <img src="/assets/img/product.png" alt="Service offered">
+                            <img src="/assets/img/product.png" alt="Produto 2">
                         </div>
                         <div class="service-card-content">
                             <div class="service-card-content-container">
                                 <h4>Produto 2</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio, pretium.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio,
+                                    pretium.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="service-card">
                         <div class="service-card-image">
-                            <img src="/assets/img/product.png" alt="Service offered">
+                            <img src="/assets/img/product.png" alt="Produto 3">
                         </div>
                         <div class="service-card-content">
                             <div class="service-card-content-container">
                                 <h4>Produto 3</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio, pretium.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio,
+                                    pretium.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
+            <!-- Diferenciais -->
+            <section id="differential">
+                <div class="title">
+                    <h3>Diferenciais</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. elit et, ultrices est.</p>
+                </div>
+
+                <div class="differential-card-group">
+                    <div class="differential-card">
+                        <div class="differential-card-image">
+                            <img src="/assets/img/coffee.svg" alt="Café">
+                        </div>
+                        <div class="differential-card-content">
+                            <div class="differential-card-content-container">
+                                <h4>Café</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio,
+                                    pretium.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="differential-card">
+                        <div class="differential-card-image">
+                            <img src="/assets/img/coins.svg" alt="Moedas">
+                        </div>
+                        <div class="differential-card-content">
+                            <div class="differential-card-content-container">
+                                <h4>Moedas</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio,
+                                    pretium.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="differential-card">
+                        <div class="differential-card-image">
+                            <img src="/assets/img/environment.svg" alt="Ambiente">
+                        </div>
+                        <div class="differential-card-content">
+                            <div class="differential-card-content-container">
+                                <h4>Ambiente</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio,
+                                    pretium.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personas -->
+            <section id="persona">
+                <div class="title">
+                    <h3>Personas</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. elit et, ultrices est.</p>
+                </div>
+
+                <div class="persona-card-group owl-carousel owl-theme">
+                    <div class="persona-card">
+                        <div class="persona-card-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio,
+                                pretium.</p>
+                        </div>
+                        <div class="persona-card-image">
+                            <img src="/assets/img/persona.svg" alt="Persona">
+                            <div class="persona-name">
+                                <p>Fulano</p>
+                                <p>Funcionário</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="persona-card">
+                        <div class="persona-card-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio,
+                                pretium.</p>
+                        </div>
+                        <div class="persona-card-image">
+                            <img src="/assets/img/persona.svg" alt="Persona">
+                            <div class="persona-name">
+                                <p>Fulano</p>
+                                <p>Funcionário</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="persona-card">
+                        <div class="persona-card-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio,
+                                pretium.</p>
+                        </div>
+                        <div class="persona-card-image">
+                            <img src="/assets/img/persona.svg" alt="Persona">
+                            <div class="persona-name">
+                                <p>Fulano</p>
+                                <p>Funcionário</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="persona-card">
+                        <div class="persona-card-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius nisi odio,
+                                pretium.</p>
+                        </div>
+                        <div class="persona-card-image">
+                            <img src="/assets/img/persona.svg" alt="Persona">
+                            <div class="persona-name">
+                                <p>Fulano</p>
+                                <p>Funcionário</p>
+                            </div>
+                        </div>
+                    </div>
             </section>
         </div>
     </main>
 
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-phone-image">
+                <img src="assets/img/phone.png" alt="Celular">
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-content-title">
+                    <h2>Este protótipo foi feito para conhecer melhor suas habilidades</h2>
+                    <p>Etiam sit amet diam dignissim sem pulvinar pulvinar. Quisque elementum purus nec urna consequat, ac feugiat eros ultrices. 
+                        Mauris consectetur sapien non eros ultrices, nec ultrices turpis facilisis.
+                    </p>
+                </div>
+                <div class="footer-content-icon">
+                    <div class="footer-content-icon-container">
+                        <img src="/assets/img/thumbs-up.svg" alt="Joinha">
+                    </div>
+                    <p>Show</p>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="assets/js/script.js"></script>
 </body>
+
 </html>
