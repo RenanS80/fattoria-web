@@ -12,7 +12,7 @@ export function menuMobile() {
 
         body.style.overflow = show ? "hidden" : "initial"      // tira a barra de rolagem
 
-        menuSection.classList.toggle("on", show)        // colocando o show garante que o toggle não vai bugar
+        menuSection.classList.toggle("on", show)        
 
         nav.classList.contains("on") ? brand.style.display = "none" : brand.style.display = "block";
         show = !show;
