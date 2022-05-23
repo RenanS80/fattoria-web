@@ -5,15 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Fattoria Web</title>
+
+    <title>Teste de Admissão | Fattoria Web</title>
 </head>
 
 <body>
@@ -26,9 +23,9 @@
 
             <div class="menu-section">
                 <div class="menu-toggle">
-                    <div class="one"></div>       <!-- primeira barra --> 
-                    <div class="two"></div>       <!-- segunda barra --> 
-                    <div class="three"></div>     <!-- terceira barra --> 
+                    <div class="one"></div> <!-- primeira barra -->
+                    <div class="two"></div> <!-- segunda barra -->
+                    <div class="three"></div> <!-- terceira barra -->
                 </div>
 
                 <nav>
@@ -48,9 +45,13 @@
         </div>
     </header>
 
+
     <!-- Hero -->
     <section class="hero">
         <div class="hero-title-area">
+        </div>
+
+        <div class="hero-background-area">
             <div class="hero-title-container">
                 <div class="hero-title">
                     <h2>Teste de Admissão</h2>
@@ -63,19 +64,38 @@
                     </p>
                 </div>
                 <div class="hero-mouse">
-                    <img src="assets/img/mouse.svg" alt="Scroll down icon">
+                    <img src="assets/img/mouse.svg" alt="Scroll mouse">
                 </div>
             </div>
-        </div>
-
-        <div class="hero-background-area">
             <div class="hero-coffee-image">
                 <img src="assets/img/coffee-img.svg" alt="Café">
+                <div class="vapour-effect-coffee">
+                    <span style="--i:1;"></span>
+                    <span style="--i:3;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:5;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:6;"></span>
+                    <span style="--i:7;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:8;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:9;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:4;"></span>
+                    <span style="--i:19;"></span>
+                  </div>
             </div>
         </div>
-    </section>
+    </section> 
 
 
+    <!-- Main -->
     <main>
         <div class="container">
             <!-- Serviços -->
@@ -85,7 +105,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. elit et, ultrices est.</p>
                 </div>
 
-                <div class="service-card-group">
+                <div class="service-card-group owl-carousel owl-theme">
                     <div class="service-card">
                         <div class="service-card-image">
                             <img src="/assets/img/product.png" alt="Produto 1">
@@ -246,18 +266,18 @@
 
     <!-- Footer -->
     <footer>
-        <section class="footer-box">
+        <section class="footer-top-phone">
             <div class="container">
-                <div class="teste-image">
+                <div class="phone-image">
                     <img src="assets/img/phone.png" alt="Celular">
                 </div>
             </div>
         </section>
 
-        <section class="aux">
+        <section class="footer-bottom-text">
             <div class="container">
-                <div class="footer-content">
-                    <div class="footer-content-title">
+                <div class="footer-content-text">
+                    <div>
                         <h2>Este protótipo foi feito para conhecer melhor suas habilidades</h2>
                         <p>Etiam sit amet diam dignissim sem pulvinar pulvinar. Quisque elementum purus nec urna
                             consequat, ac feugiat eros ultrices.
@@ -279,12 +299,8 @@
 
 
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script type="module" src="assets/js/script.js"></script>
 </body>
 

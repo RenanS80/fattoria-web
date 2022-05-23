@@ -1,4 +1,6 @@
 main {
+    background-color: $white-1;
+    
     .container {
         @include container();
 
@@ -26,16 +28,19 @@ main {
             }
 
             .service-card-group {
-                margin-top: 3rem;
                 display: flex;
-                justify-content: space-around;
+                margin-top: 3rem;
+                justify-content: center;
+                gap: 1.2rem;
+                align-items: center;
+                background-color: $white-1;
 
                 .service-card {
-                    width: 31rem;
+                    width: clamp(20rem, 100%, 31rem);
                     height: 100%;
                     background-color: $white-1;
                     border-radius: 1rem;
-                    filter: drop-shadow(-0.2rem 0.3rem 1rem rgba(211, 211, 211, 0.502));
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
 
                     .service-card-image {
                         width: 100%;
@@ -76,12 +81,12 @@ main {
             padding-top: 5.2rem;
 
             .differential-card-group {
-                margin-top: 3rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-wrap: wrap;
                 gap: 1.5rem;
-                /* padding-bottom: 1.5rem; */
+                margin-top: 3rem;
 
                 .differential-card {
                     width: 24rem;
@@ -107,18 +112,17 @@ main {
             padding-top: 5.2rem;
 
             .persona-card-group {
-                margin-top: 3rem;
                 display: flex;
                 justify-content: center;
-                align-items: space-between;
+                align-items: center;
                 flex-wrap: wrap;
                 gap: 1.5rem;
-                padding-bottom: 1.5rem;
-                /* border: 1px solid black; */
                 position: relative;
+                margin-top: 3rem;
+                padding-bottom: 1.5rem;
 
                 .persona-card {
-                    width: 31rem;
+                    width: clamp(20rem, 100%, 31rem);
                     height: 100%;
                     padding: 2rem;
                     border-radius: 1rem;
@@ -142,17 +146,17 @@ main {
                     }
 
                     .persona-card-image {
-                        margin-top: 2rem;
                         display: flex;
-                        gap: 1.7rem;
                         align-items: center;
+                        margin-top: 2rem;
+                        gap: 1.7rem;
 
                         .persona-name p:first-child {
-                            color: $black-2;
                             font-weight: 700;
                             font-size: 1.7rem;
                             line-height: 2.2rem;
                             margin-bottom: 0.5rem;
+                            color: $black-2;
                         }
 
                         .persona-name p:last-child {
@@ -164,44 +168,36 @@ main {
             }
 
             .owl-theme .owl-dots .owl-dot.active span {
-                background-color: $purple !important;
+                background-color: $purple;
             }
 
             .owl-theme .owl-nav {
                 font-weight: 100;
                 font-size: 9rem;
-                color: rgb(197, 197, 197);
+                color: $gray-3;
             }
-            .owl-prev {
-                width: 15px;
-                height: 100px;
-                position: absolute;
-                top: 26px;
-                display: block !important;
-                border: 0;
-            }
+
+            .owl-prev,
             .owl-next {
-                width: -12px;
-                height: 100px;
+                display: block;
                 position: absolute;
-                top: 26px;
-                display: block !important;
-                border: 0;
+                top: 2.6rem;
+               
+                @media (max-width: 1050px) {
+                    display: none !important;
+                } 
             }
+
             .owl-carousel .owl-nav button.owl-prev {
-                left: -40px;
+                left: -4rem;
             }
             .owl-carousel .owl-nav button.owl-next {
-                right: -40px;
+                right: -4rem;
             }
             .owl-carousel .owl-nav button.owl-prev:hover,
             .owl-carousel .owl-nav button.owl-next:hover {
                 background-color: inherit;
                 color: $purple;
-            }
-            .owl-carousel .owl-nav button.owl-prev:focus,
-            .owl-carousel .owl-nav button.owl-next:focus {
-                outline: none;
             }
         }
     }

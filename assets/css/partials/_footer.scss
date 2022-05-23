@@ -1,21 +1,23 @@
 footer {
     overflow: hidden;
 
-    .footer-box {
+    .footer-top-phone {
         width: 100%;
-        height: 100px;
+        height: 10rem;
         position: relative;
+
+        @media (max-width: 880px) {
+            display: none;
+        }
 
         .container {
             @include container();
-            /* border: 1px solid green; */
 
-            .teste-image {
-                width: 360px;
-                height: 537px;
+            .phone-image {
+                width: 36rem;
+                height: 53.7rem;
                 position: absolute;
-                bottom: -490px;
-                /* border: 1px solid blue; */
+                bottom: -49rem;
         
                 img {
                     width: 100%;
@@ -25,9 +27,13 @@ footer {
         }
     }
 
-    .aux {
-        height: 390px;
+    .footer-bottom-text {
+        height: 39rem;
         background-color: $purple;
+
+        @media (max-width: 880px) {
+            margin-top: 5rem;
+        }
 
         .container {
             @include container();
@@ -36,133 +42,41 @@ footer {
             justify-content: flex-end;
             align-items: center;
 
-            .footer-content {
-                /* border: 1px solid black; */
-                max-width: 500px;
+            @media (max-width: 880px) {
+                justify-content: center;
+            }
+
+            .footer-content-text {
+                max-width: 50rem;
 
                 h2, p {
                     color: $white-1;
-                    margin-bottom: 15px;
+                    margin-bottom: 1.5rem;
                 }
 
                 .footer-content-icon {
-                    /* border: 1px solid yellow; */
                     display: flex;
                     align-items: center;
-                    margin-top: 15px;
-                    color: $white-1;
+                    gap: 1.5rem;
+                    margin-top: 1.5rem;
                     font-weight: 700;
-                    gap: 15px;
+                    color: $white-1;
 
                     p {
                         margin: 0;
                     }
 
                     .footer-content-icon-container {
-                        width: 53px;
-                        height: 40px;
-                        background-color: $white-1;
-                        border-radius: 20px;
+                        width: 5.3rem;
+                        height: 4rem;
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        border-radius: 2rem;
+                        background-color: $white-1;
                     }
                 }
-
             }
-            
         }
-
-
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .aux {
-    height: 390px;
-    width: 100vw;
-    background-color: $purple; */
-
-/*     position: relative; */
-    
-
-    /* .container {
-        @include container();
-
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-
-        .footer-phone-image {
-            z-index: 9999;
-            width: 360px;
-            height: 537px;
-            border: 1px solid black; */
-/*             position: absolute;
-            top: -70px; */
-           /*  
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        .footer-content {
-            max-width: 500px;
-            border: 1px solid blue;
-
-            .footer-content-title {
-                
-
-                h2 {
-                    color: $white-1;
-                }
-
-                p {
-                    color: $white-1;
-                    margin-top: 15px; 
-                }
-            }
-
-            .footer-content-icon {
-                display: flex;
-                align-items: center;
-                margin-top: 15px;
-                color: $white-1;
-                font-weight: 700;
-                gap: 15px;
-                
-
-
-                .footer-content-icon-container {
-                    width: 53px;
-                    height: 40px;
-                    background-color: $white-1;
-                    border-radius: 20px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-            }
-
-
-
-
-        }
-    }
-
-    
- */

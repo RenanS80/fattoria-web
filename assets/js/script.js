@@ -1,36 +1,42 @@
+import { menuMobile } from "./menuMobile.js";
 import { owlCarousel } from "./owlCarousel.js";
 
+menuMobile();
 owlCarousel();
 
 
 
+/* 
+let primeiro = document.querySelector('.hero-title');
+let segundo = document.querySelector('.hero-text');
+segundo.style.zIndex = '99999';
+let terceiro = document.querySelector('.hero-mouse');
+terceiro.style.zIndex = '99999';
 
-let show = true; 
+let cont = document.querySelector('.hero-title-container')
 
-const menuSection = document.querySelector(".menu-section")
-const brand = document.querySelector(".header-brand");
-const menuToggle = menuSection.querySelector(".menu-toggle")
-const nav = menuSection.querySelector("nav")
-const navList = menuSection.querySelectorAll("nav ul li a")
-const body = document.querySelector("body")
+let primeiroClone = primeiro.cloneNode(true);
+let segundoClone = segundo.cloneNode(true);
 
-menuToggle.addEventListener("click", () => {
+let background = document.querySelector('.hero-background-area');
 
-    body.style.overflow = show ? "hidden" : "initial"      // tira a barra de rolagem
+function showElement() {
+    let show = true;
 
-    menuSection.classList.toggle("on", show)        // colocando o show garante que o toggle não vai bugar
 
-    nav.classList.contains("on") ? brand.style.display = "none" : brand.style.display = "block";
-    show = !show;
-})
+        if(window.innerWidth <= 900) {
+            background.classList.toggle('on')
+            background.appendChild(primeiro)
+            background.appendChild(segundo)
+        }
 
-// Voltar ao estado inicial ao clicar sobre um item do menu (recolhe o toggle)
-navList.forEach((item) => {
-    item.addEventListener("click", () => {
-        body.style.overflow = "initial";
-        menuSection.classList.toggle("on", show)
-        nav.classList.toggle("on", show);
-        brand.style.display = "block";
-        show = !show;
-    })
-})
+        else {
+            background.removeChild(primeiro)
+            background.removeChild(segundo)
+        }
+
+
+} */
+
+/* showElement(); */
+

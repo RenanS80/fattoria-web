@@ -1,35 +1,36 @@
 header {
-    height: 90px;
     width: 100%;
-    top: 0;
-    border-bottom: 1px solid $gray-3;
-    z-index: 99999;
+    height: 9rem;
     position: sticky;
+    top: 0;         // fixa a posição no topo
+    z-index: 9999;
+    border-bottom: 0.1rem solid $gray-3;
     background-color: $white-1;
 
     .container {
         @include container();
 
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
 
         .menu-section {
+
             .menu-toggle {
                 @media (max-width: 768px) {
-                    width: 40px; // define o tamanho do container que engloba o menu hambúrguer
-                    height: 30px;
-                    margin-right: 20px;
+                    width: 4rem;        // define o tamanho do container que engloba o menu mobile
+                    height: 3rem;
+                    margin-right: 2rem;
 
                     .one,
                     .two,
                     .three {
-                        background-color: $black-1; // cria os três traços do menu hambúrguer
-                        height: 5px;
                         width: 100%;
-                        margin: 6px auto;
+                        height: 0.5rem;
+                        background-color: $black-1;     // cria os três traços do menu mobile
+                        margin: 0.6rem auto;
                         transition-duration: 0.3s;
-                        border-radius: 5px;
+                        border-radius: 0.5rem;
                     }
                 }
             }
@@ -72,21 +73,20 @@ header {
 
         .menu-section.on {
             @media (max-width: 768px) {
+                width: 100vw;
+                height: 100vh;
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100vw;
-                height: 100vh;
-                background-color: #7159c1;
-                z-index: 10; // para ficar posicionado sobre os demais elementos da página
+                background-color: $purple;
                 display: flex;
-                padding-top: 70px;
-                padding-left: 30px;
+                padding-top: 7rem;
+                padding-left: 3rem;
                 
                 .menu-toggle {
                     position: absolute;
-                    right: 12px;
-                    top: 25px;
+                    right: 1.2rem;
+                    top: 2.5rem;
 
                     .one,
                     .two,
@@ -95,7 +95,7 @@ header {
                     }
 
                     .one {
-                        transform: rotate(45deg) translate(7px, 7px);
+                        transform: rotate(45deg) translate(0.7rem, 0.7rem);
                     }
 
                     .two {
@@ -103,24 +103,22 @@ header {
                     }
 
                     .three {
-                        transform: rotate(-45deg) translate(8px, -9px);
+                        transform: rotate(-45deg) translate(0.8rem, -0.9rem);
                     }
                 }
 
                 nav {
-                    display: block; // exibe os itens da nav que foram escondidos no primeiro passo (só serão exibidos caso estejam com a classe "on" - que será manipulada no Javascript)
+                    display: block;     // exibe os itens da nav que foram escondidos 
                 
                     ul { 
                         display: block;
 
                         a {
-                            transition-duration: 0.5s;
-                            font-size: 3rem;
-                            line-height: 8rem;        // aumenta a distância de um item para o outro
-                            display: block;
                             color: $white-1;
-                            font-size: 3.3rem;
                             font-weight: 700;
+                            font-size: 3.3rem;
+                            line-height: 8rem;        // aumenta a distância de um item para o outro
+                            transition-duration: 0.5s;
                         }
                     }
                 }
