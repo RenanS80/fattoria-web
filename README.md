@@ -2,7 +2,7 @@
 
 ## 📃 Sobre
 Demonstração: <br>
-<https://renans80.github.io/fattoria-web/>
+<https://renan-fattoriaweb.netlify.app>
 
 Este teste faz parte do processo seletivo da empresa [FattoriaWeb](https://www.fattoriaweb.com.br/).
 
